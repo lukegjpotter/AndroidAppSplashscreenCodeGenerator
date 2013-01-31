@@ -33,7 +33,7 @@ public class SplashscreenActivity extends Activity {
 					e.printStackTrace();
 				} finally {
 					
-					Intent openNextActivity = new Intent("com.mycompany.app.appname.APPNAME");
+					Intent openNextActivity = new Intent("com.mycompany.app.appname.ACTIVITYAFTERSPLASH");
 					startActivity(openNextActivity);
 				}
 			} // End run method
