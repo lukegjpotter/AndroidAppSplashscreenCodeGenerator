@@ -1,3 +1,5 @@
+Put the following text into your AndroidManifest.xml inside the <Application></Application> tags
+
         <activity 
             android:name=".SplashscreenActivity"
             android:label="@string/app_name"
@@ -7,3 +9,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.mycompany.app.appname.ActivityAfterSplash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.mycompany.app.appname.ACTIVITYAFTERSPLASH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+Enjoy!
