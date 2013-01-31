@@ -9,7 +9,7 @@ import android.os.Bundle;
  * 
  * This it the splash screen activity for the app
  */
-public class Splashscreen extends Activity {
+public class SplashscreenActivity extends Activity {
 
 	// Dictates how long the splash screen appears for
 	protected static final long timeout = 2000;
