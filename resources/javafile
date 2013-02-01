@@ -19,7 +19,7 @@ public class SplashscreenActivity extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		
-		setContentView(R.layout.splashscreen);
+		setContentView(R.layout.activity_splash);
 		
 		Thread timer = new Thread() {
 			
