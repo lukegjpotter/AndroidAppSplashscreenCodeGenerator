@@ -28,6 +28,8 @@
 #	string in the form of /com/mycompany/app/appname
 function package_to_string {
 	
+	echo "    [INFO]    Changing the package name into a directory structure"
+	
 	out=""
 	arr=$(echo $1 | tr "." "\n")
 
@@ -71,10 +73,14 @@ function evaluate_args {
 		
 		exit $BAD_ARGS
 	fi
+	
+	echo "    [START]   Starting the generation of the code for a splashscreen."
 }
 
 # A function to populate the SplashscreenActivity.java file
 function put_text_in_java_file {
+	
+	echo "    [INFO]    Creating and populating the java code into the Activity class."
 	
 	touch $JAVA_Location
 	packageText="package $AppPackage;"
@@ -87,6 +93,8 @@ function put_text_in_java_file {
 # A function to populate the activity_splashscreen.xml layout file
 function put_text_in_xml_file {
 	
+	echo "    [INFO]    Creating and populating the XML into the layout file."
+	
 	touch $XML_Location
 	cat $XML_FILE > $XML_Location
 }
@@ -94,12 +102,16 @@ function put_text_in_xml_file {
 # A function to put the supplied image in the app's drawable folder 
 function put_image_in_img_location {
 	
+	echo "    [INFO]    Copying the image to the drawable-hdpi resource folder"
+	
 	cp $SplashImagePath $IMG_Location
 }
 
 # A function 
 function print_end_message {
 	cat resources/manifestfile
+	
+	echo "    [FINISH]  Splashscreen code generated!"
 }
 
 #--------------------------------------
